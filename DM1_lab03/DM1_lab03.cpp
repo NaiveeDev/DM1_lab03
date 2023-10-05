@@ -173,14 +173,25 @@ int main() {
 	string BinaryB = DoBinarySet(B);
 
 	//Робота усіх функцій
-	CombineSets(A, B);
-	CrossSets(A, B);
-	DiffSets(A, B);
-	ComplementSets(A, B);
-	SymmDiff(A, B);
-	CartesianProduct(A, B);
-	isSubset(A, B);
-	isEqual(A, B);
+	
+	vector<int> CombSet = CombineSets(A, B);
+	PrintSet(CombSet);
+
+	vector<int> CrossSet = CrossSets(A, B);
+	PrintSet(CrossSet);
+
+	vector<int> DiffSet = DiffSets(A, B);
+	PrintSet(DiffSet);
+
+	vector<int> CompSet = ComplementSets(A, B);
+	PrintSet(CompSet);
+
+	vector<int> SyDi = SymmDiff(A, B);
+	PrintSet(SyDi);
+
+	vector<pair<int, int>> CartProd = CartesianProduct(A, B);
+	cout << isSubset(A, B) << endl;
+	cout << isEqual(A, B) << endl;
 
 	
 	PrintSet(A);
